@@ -2,16 +2,16 @@ package com.baeldung.lss.web.model;
 
 import java.util.Calendar;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 public class User {
 
     private Long id;
 
-    @NotEmpty(message = "Username is required.")
+    @NotNull(message = "Username is required.")
     private String username;
 
-    @NotEmpty(message = "Email is required.")
+    @NotNull(message = "Email is required.")
     private String email;
 
     private Calendar created = Calendar.getInstance();
